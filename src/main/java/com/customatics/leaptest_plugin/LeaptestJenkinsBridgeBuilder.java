@@ -67,7 +67,7 @@ public class LeaptestJenkinsBridgeBuilder extends Builder  implements SimpleBuil
         ScheduleCollection buildResult = new ScheduleCollection();
         ArrayList<String> rawScheduleList = null;
 
-        String junitReportPath = pluginHandler.getJunitReportFilePath(env.get(Messages.JENKINS_WORKSPACE_VARIABLE), getReport());
+        String junitReportPath = pluginHandler.getJunitReportFilePath(workspace.toString(), getReport());
         listener.getLogger().println(junitReportPath);
         env = null;
 
